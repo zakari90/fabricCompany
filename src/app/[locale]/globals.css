@@ -1,0 +1,299 @@
+@tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+
+  @layer base {
+
+    :root {
+      --background: 33.3, 100%, 97.6%; /* #FFF5E4 */
+      --foreground: 0, 0%, 0%; /* #000000 */
+      --card: 0, 87.5%, 93.9%; /* #FFE3E1 */
+      --card-foreground: 0, 0%, 0%; /* #000000 */
+      --popover: 0, 66.7%, 88.2%; /* #FFD1D1 */
+      --popover-foreground: 0, 0%, 0%; /* #000000 */
+      --primary: 0, 60%, 64.5%; /* #FF9494 */
+      --primary-foreground:0 58% 87%; /* #FFFFFF */
+      --secondary: 0, 87.5%, 93.9%; /* #FFE3E1 */
+      --secondary-foreground: 0, 0%, 0%; /* #000000 */
+      --muted: 0, 66.7%, 88.2%; /* #FFD1D1 */
+      --muted-foreground: 0, 0%, 0%; /* #000000 */
+      --accent: 0, 87.5%, 93.9%; /* #FFE3E1 */
+      --accent-foreground: 0, 0%, 0%; /* #000000 */
+      --destructive: 0, 60%, 64.5%; /* #FF9494 */
+      --destructive-foreground: 0, 0%, 100%; /* #FFFFFF */
+      --border: 0, 87.5%, 93.9%; /* #FFE3E1 */
+      --input: 0, 87.5%, 93.9%; /* #FFE3E1 */
+      --ring: 0, 60%, 64.5%; /* #FF9494 */
+      --radius: 0.5rem;
+      --chart-1: 12 76% 61%;
+      --chart-2: 173 58% 39%;
+      --chart-3: 197 37% 24%;
+      --chart-4: 43 74% 66%;
+      --chart-5: 27 87% 67%;
+    }
+    
+    .dark {
+      --background: 0, 60%, 64.5%; /* #FF9494 */
+      --foreground: 0, 0%, 100%; /* #FFFFFF */
+      --card: 0, 60%, 64.5%; /* #FF9494 */
+      --card-foreground: 0, 0%, 100%; /* #FFFFFF */
+      --popover: 0, 60%, 64.5%; /* #FF9494 */
+      --popover-foreground: 0, 0%, 100%; /* #FFFFFF */
+      --primary: 0, 0%, 100%; /* #FFFFFF */
+      --primary-foreground: 0, 60%, 64.5%; /* #FF9494 */
+      --secondary: 0, 87.5%, 93.9%; /* #FFE3E1 */
+      --secondary-foreground: 0, 0%, 100%; /* #FFFFFF */
+      --muted: 0, 87.5%, 93.9%; /* #FFE3E1 */
+      --muted-foreground: 0, 60%, 64.5%; /* #FF9494 */
+      --accent: 0, 87.5%, 93.9%; /* #FFE3E1 */
+      --accent-foreground: 0, 0%, 100%; /* #FFFFFF */
+      --destructive: 0, 84.2%, 60.2%; /* Adjust as needed */
+      --destructive-foreground: 0, 0%, 100%; /* #FFFFFF */
+      --border: 0, 87.5%, 93.9%; /* #FFE3E1 */
+      --input: 0, 87.5%, 93.9%; /* #FFE3E1 */
+      --ring: 0, 60%, 64.5%; /* #FF9494 */
+      --chart-1: 220 70% 50%;
+      --chart-2: 160 60% 45%;
+      --chart-3: 30 80% 55%;
+      --chart-4: 280 65% 60%;
+      --chart-5: 340 75% 55%;
+    }
+    
+    
+    /* :root {
+      --background: 0 0% 100%;
+      --foreground: 222.2 84% 4.9%;
+      --card: 0 0% 100%;
+      --card-foreground: 222.2 84% 4.9%;
+      --popover: 0 0% 100%;
+      --popover-foreground: 222.2 84% 4.9%;
+      --primary: 222.2 47.4% 11.2%;
+      --primary-foreground: 210 40% 98%;
+      --secondary: 210 40% 96.1%;
+      --secondary-foreground: 222.2 47.4% 11.2%;
+      --muted: 210 40% 96.1%;
+      --muted-foreground: 215.4 16.3% 46.9%;
+      --accent: 210 40% 96.1%;
+      --accent-foreground: 222.2 47.4% 11.2%;
+      --destructive: 0 84.2% 60.2%;
+      --destructive-foreground: 210 40% 98%;
+      --border: 214.3 31.8% 91.4%;
+      --input: 214.3 31.8% 91.4%;
+      --ring: 222.2 84% 4.9%;
+      --radius: 0.5rem;
+      --chart-1: 12 76% 61%;
+      --chart-2: 173 58% 39%;
+      --chart-3: 197 37% 24%;
+      --chart-4: 43 74% 66%;
+      --chart-5: 27 87% 67%;
+    }
+
+    .dark {
+      --background: 222.2 84% 4.9%;
+      --foreground: 210 40% 98%;
+      --card: 222.2 84% 4.9%;
+      --card-foreground: 210 40% 98%;
+      --popover: 222.2 84% 4.9%;
+      --popover-foreground: 210 40% 98%;
+      --primary: 210 40% 98%;
+      --primary-foreground: 222.2 47.4% 11.2%;
+      --secondary: 217.2 32.6% 17.5%;
+      --secondary-foreground: 210 40% 98%;
+      --muted: 217.2 32.6% 17.5%;
+      --muted-foreground: 215 20.2% 65.1%;
+      --accent: 217.2 32.6% 17.5%;
+      --accent-foreground: 210 40% 98%;
+      --destructive: 0 62.8% 30.6%;
+      --destructive-foreground: 210 40% 98%;
+      --border: 217.2 32.6% 17.5%;
+      --input: 217.2 32.6% 17.5%;
+      --ring: 212.7 26.8% 83.9%;
+      --chart-1: 220 70% 50%;
+      --chart-2: 160 60% 45%;
+      --chart-3: 30 80% 55%;
+      --chart-4: 280 65% 60%;
+      --chart-5: 340 75% 55%;
+    } */
+  }
+
+  @layer base {
+    * {
+      @apply border-border;
+    }
+    body {
+      @apply bg-background text-foreground;
+    }
+  }
+
+  
+@keyframes marquee {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.marquee {
+  display: inline-block;
+  white-space: nowrap;
+  animation: marquee 20s linear infinite;
+}
+@keyframes marqueeAr {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+.marqueeAr {
+  display: inline-block;
+  white-space: nowrap;
+  animation: marqueeAr 20s linear infinite;
+}
+
+
+.news-bar-container {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+
+.app {
+  max-width: 1200px;
+  width: 100%;
+  margin: 100px auto;
+  box-shadow: 0 0 5px #ccc;
+}
+.details {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 30px 0;
+}
+.details .large-img {
+  width: 500px;
+  height: 380px;
+  overflow: hidden;
+  margin: 25px;
+}
+.large-img img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.details .box {
+  max-width: 500px;
+  min-width: 290px;
+  margin: 25px;
+}
+.box .row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+
+
+}
+.box .row h2 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.box .row span {
+  color: crimson;
+  font-weight: 600;
+}
+.box .colors button {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #333;
+  outline: none;
+  margin-right: 5px;
+  cursor: pointer;
+}
+.box p {
+  line-height: 1.5;
+  margin: 15px 0;
+}
+.thumb {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  cursor: pointer;
+  margin: 10px 0;
+}
+.thumb img {
+  width: 200px;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  border: 1px solid #ddd;
+  margin-right: 5px;
+  opacity: 0.7;
+  border-radius: 5px;
+}
+.thumb img.active {
+  opacity: 1;
+  border: 1px solid lightseagreen;
+}
+.box .add-to-cart {
+  background: #333;
+  color: white;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px 25px;
+  margin-top: 15px;
+}
+
+/*------------ Responsive --------------*/
+@media (max-width: 500px) {
+  .app {
+    margin: 50px auto;
+  }
+  .details {
+    padding: 25px 0;
+  }
+  .large-img-wrapper {
+    text-align: center;
+  }
+  .details .large-img {
+    width: 90%;
+    height: 90%;
+    margin: 0;
+  }
+  .details .box {
+    width: 90%;
+    height: 90%;
+    margin: 0;
+  }
+  .thumb img {
+    width: 100px;
+  }
+}
+
+
+/* costum scrollbar */
+
+.scrollbar2::-webkit-scrollbar {
+  width: 20px;
+}
+
+.scrollbar2::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.scrollbar2::-webkit-scrollbar-thumb {
+  background-image: url('https://i.ibb.co/1RHr40z/248599.png'); 
+  background-repeat: no-repeat, no-repeat;
+  background-size: 20px;
+  position: absolute;
+}
+
+
+@keyframes colorAnimation {
+  0% { fill: green; }
+  33% { fill: yellow; }
+  66% { fill: red; }
+  100% { fill: green; }
+}
+
+.color-change {
+  animation: colorAnimation 6s infinite;
+}
