@@ -23,8 +23,6 @@ export default function NavBar({ locale, navLinks }: NavBarProps) {
     <header className="bg-background p-4 flex items-center justify-between">
       
       <div className="container mx-auto flex justify-between items-center">
-      <div>
-      </div>
         <LogoComponent />
         <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
           {navLinks.map((link, index) => (
