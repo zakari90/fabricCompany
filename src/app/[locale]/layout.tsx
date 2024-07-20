@@ -34,7 +34,7 @@ export default function RootLayout({
   const documentDirection = locale === 'ar' ? "rtl" :  "ltr";
 
   const Navigation = useTranslations('navigation');
-  const navLinks = [
+  const navLinks:[string, string][] = [
     [Navigation('home'), 'home'],
     [Navigation('services'), 'services'],
     [Navigation('pr'), 'products'],
