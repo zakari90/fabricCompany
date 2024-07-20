@@ -1,6 +1,6 @@
 "use client"
 import React, { useState, useEffect, useRef } from 'react';
-import './productDetails.css';
+import './prdoductsDetails.css';
 import Image from 'next/image';
 import WhatsAppLink from '@/components/whatsAppComponents';
 
