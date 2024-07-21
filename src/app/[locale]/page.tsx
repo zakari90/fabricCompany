@@ -2,6 +2,7 @@ import AboutSection from '@/components/aboutSection';
 import ContactSection from '@/components/contactSection';
 import HeroSection from '@/components/heroSection';
 import ProductsSection from '@/components/productsSection';
+import ProductsSectionContent2 from '@/components/productsSectionContent2';
 import ServicesSection from '@/components/servicesSection';
 import { Separator } from '@/components/ui/separator';
 import { useTranslations } from 'next-intl';
@@ -37,7 +38,6 @@ export default function Home({params} :{
       {/* products */}
       <ProductsSection title={productsSection("title")} locale= {params.locale} products={productsSection.raw('productsList')}/>
       <Separator className="my-1 w-1/3 mt-auto" />
-
       {/* --------------------- */}
 
       {/* contact */}      

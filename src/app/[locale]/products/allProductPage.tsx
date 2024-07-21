@@ -3,40 +3,20 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 
-interface Product {
+export interface Product {
   id: number;
   name: string;
   description: string;
   price: string;
-  image: string;
-  pictures?: string[];
+  pictures: string[];
 }
 
-interface ProductsProps {
+export interface ProductsProps {
   locale: string;
   products: Product[];
   title: string;
 }
 
-const products: Product[] = [
-  {
-    id: 1,
-    name: 'Product Name',
-    description: 'Product Description',
-    price: '$99.99',
-    image: '/placeholder.svg',
-    pictures: ['/placeholder.svg'],
-  },
-  {
-    id: 2,
-    name: 'Product Name',
-    description: 'Product Description',
-    price: '$99.99',
-    image: '/placeholder.svg',
-    pictures: ['/placeholder.svg'],
-  },
-  // Add more products as needed
-];
 
 export default function AllProductPage({ locale, products, title }: ProductsProps) {
   const domaine = "http://localhost:3000";
@@ -52,7 +32,7 @@ export default function AllProductPage({ locale, products, title }: ProductsProp
               <span className="sr-only">View</span>
             </Link>
             <Image
-              src={product.pictures?.[0] || product.image}
+              src={product.pictures?.[0]}
               alt={product.name}
               width={200}
               height={200}

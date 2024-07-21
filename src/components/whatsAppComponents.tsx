@@ -4,8 +4,8 @@ import React from 'react';
 const WhatsAppLink = ({productName}:{
   productName? : string
 }) => {
-  const handleWhatsAppClick = (e) => {
-    e.preventDefault();
+  const handleWhatsAppClick = () => {
+    // e.preventDefault();
     const phoneNumber = '1234567890';
     const message = productName ? `Hello! I'm interested in ${productName}` : "Hello! I'm interested in your product";
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
@@ -18,14 +18,14 @@ const WhatsAppLink = ({productName}:{
       href="#"
       onClick={handleWhatsAppClick}
     >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="size-5 shrink-0 text-gray-900"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                >
+    <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="size-5 shrink-0 text-gray-900"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            strokeWidth="2"
+          >
             <path id="XMLID_469_" d="M227.904,176.981c-0.6-0.288-23.054-11.345-27.044-12.781c-1.629-0.585-3.374-1.156-5.23-1.156
                 c-3.032,0-5.579,1.511-7.563,4.479c-2.243,3.334-9.033,11.271-11.131,13.642c-0.274,0.313-0.648,0.687-0.872,0.687
                 c-0.201,0-3.676-1.431-4.728-1.888c-24.087-10.463-42.37-35.624-44.877-39.867c-0.358-0.61-0.373-0.887-0.376-0.887

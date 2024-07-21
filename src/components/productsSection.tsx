@@ -11,20 +11,11 @@ import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "./ui/button";
+import { ProductsProps } from "@/app/[locale]/products/allProductPage";
 
-  interface SingleProduct {
-    id: number;
-    name: string;
-    description: string;
-    pictures?:[]
-  }
- export interface Products{
-    locale:string,
-    title:string,
-    products:SingleProduct[]
-  }
+
   export default function ProductsSection({locale, products, title} :
-    Products
+    ProductsProps
   ) {
   return (
     <>
