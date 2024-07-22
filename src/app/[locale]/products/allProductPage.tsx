@@ -19,7 +19,8 @@ export interface ProductsProps {
 
 
 export default function AllProductPage({ locale, products, title }: ProductsProps) {
-  const domaine = "http://localhost:3000";
+  const domaine = process.env.NEXT_PUBLIC_DOMAINE;
+
 
   return (
     <section id="products" 
@@ -28,7 +29,7 @@ export default function AllProductPage({ locale, products, title }: ProductsProp
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
         {products.map((product) => (
           <div key={product.id} className="relative group">
-            <Link href={`${domaine}/${locale}/products/${product.id}`} className="absolute inset-0 z-10" prefetch={false}>
+            <Link href={`${domaine}${locale}/products/${product.id}`} className="absolute inset-0 z-10" prefetch={false}>
               <span className="sr-only">View</span>
             </Link>
             <Image
