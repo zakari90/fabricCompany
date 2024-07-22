@@ -1,5 +1,5 @@
 "use client";
-
+import { ProductsProps } from "@/app/[locale]/products/allProductPage";
 import {
   Carousel,
   CarouselContent,
@@ -10,8 +10,6 @@ import {
 import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
 import Link from "next/link";
-import { Button } from "./ui/button";
-import { ProductsProps } from "@/app/[locale]/products/allProductPage";
 
 
   export default function ProductsSection({locale, products, title} :

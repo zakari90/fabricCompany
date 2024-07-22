@@ -1,13 +1,11 @@
 "use client"
 
-import React from 'react';
-import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { SheetTrigger, SheetContent, Sheet, SheetClose } from '@/components/ui/sheet';
-import { useTranslations } from 'next-intl';
+import { Sheet, SheetClose, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import Link from 'next/link';
+import { JSX, SVGProps } from 'react';
 import LangSwitcher from './lang-switcher';
 import LogoComponent from './logoComponents';
-import { JSX, SVGProps } from 'react';
 
 
 type NavLink = [string, string];
@@ -28,8 +26,6 @@ export default function NavBar({ locale, navLinks }: NavBarProps) {
           {navLinks.map((link, index) => (
             <Link className="nav-link hover:underline hover:underline-offset-4"
               key={index} 
-              
-              // ={`${locale}/products/${product.id}`}
               href={`${domaine}${locale}/#${link[1]}`}>
               {link[0]}
             </Link>
@@ -49,7 +45,8 @@ export default function NavBar({ locale, navLinks }: NavBarProps) {
             {navLinks.map((link, index) => (
               <SheetClose asChild key={index}>
                 <Link className="nav-link font-medium hover:underline hover:underline-offset-4"
-                  href={`${domaine}/${locale}/#${link[1]}`}>
+                  // href={`${domaine}/${locale}/#${link[1]}`}
+                  href={`${domaine}${locale}/#${link[1]}`}>
                   {link[0]}
                 </Link>
               </SheetClose>
