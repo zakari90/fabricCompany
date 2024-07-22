@@ -27,7 +27,10 @@ export default function NavBar({ locale, navLinks }: NavBarProps) {
         <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
           {navLinks.map((link, index) => (
             <Link className="nav-link hover:underline hover:underline-offset-4"
-              key={index} href={`${domaine}/${locale}/#${link[1]}`}>
+              key={index} 
+              
+              // ={`${locale}/products/${product.id}`}
+              href={`${domaine}${locale}/#${link[1]}`}>
               {link[0]}
             </Link>
           ))}
