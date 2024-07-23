@@ -1,12 +1,12 @@
 "use client"
-
-import { Button } from '@/components/ui/button';
-import { Sheet, SheetClose, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+//navbar with sheet not working
+import React from 'react';
 import Link from 'next/link';
-import { JSX, SVGProps } from 'react';
+import { Button } from '@/components/ui/button';
+import { SheetTrigger, SheetContent, Sheet, SheetClose } from '@/components/ui/sheet';
 import LangSwitcher from './lang-switcher';
 import LogoComponent from './logoComponents';
-
+import { JSX, SVGProps } from 'react';
 
 type NavLink = [string, string];
 
@@ -14,19 +14,18 @@ export interface NavBarProps {
   locale: string;
   navLinks: NavLink[];
 }
-export default function NavBar({ locale, navLinks }: NavBarProps) {
+
+export default function SheetNavBar({ locale, navLinks }: NavBarProps) {
   const domaine = process.env.NEXT_PUBLIC_DOMAINE;
 
   return (
     <header className="bg-background p-4 flex items-center justify-between">
-      
       <div className="container mx-auto flex justify-between items-center">
         <LogoComponent />
         <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
           {navLinks.map((link, index) => (
             <Link className="nav-link hover:underline hover:underline-offset-4"
-              key={index} 
-              href={`${domaine}${locale}/#${link[1]}`}>
+              key={index} href={`${domaine}${locale}/#${link[1]}`}>
               {link[0]}
             </Link>
           ))}
@@ -40,13 +39,16 @@ export default function NavBar({ locale, navLinks }: NavBarProps) {
             <span className="sr-only">Toggle navigation menu</span>
           </Button>
         </SheetTrigger>
-        <SheetContent>
+        <SheetContent >
           <div className="grid gap-6 p-4">
             {navLinks.map((link, index) => (
               <SheetClose asChild key={index}>
-                <Link className="nav-link font-medium hover:underline hover:underline-offset-4"
-                  // href={`${domaine}/${locale}/#${link[1]}`}
-                  href={`${domaine}${locale}/#${link[1]}`}>
+                <Link
+                  className="nav-link font-medium hover:underline hover:underline-offset-4"
+                  href={`${domaine}${locale}/#${link[1]}`}
+                  onClick={() => setTimeout(() => {}, 300)} // Delay to ensure sheet closes
+                key={index}
+                >
                   {link[0]}
                 </Link>
               </SheetClose>

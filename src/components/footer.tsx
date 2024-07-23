@@ -2,7 +2,7 @@ import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import LogoComponent from './logoComponents';
 import WhatsAppLink from './whatsAppComponents';
-import { NavBarProps } from './nav';
+import { NavBarProps } from './navWithSheet';
 
 
 export default function Footer({ locale, navLinks }: NavBarProps) {
