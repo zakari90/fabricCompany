@@ -1,10 +1,10 @@
 "use client"
-import { useState } from "react";
-import { NavBarProps } from "./navWithSheet";
+import { MenuIcon, XIcon } from "lucide-react";
 import Link from "next/link";
+import { useState } from "react";
 import LangSwitcher from "./lang-switcher";
-import { Cross, MenuIcon, SidebarClose, XIcon } from "lucide-react";
 import LogoComponent from "./logoComponents";
+import { NavBarProps } from "./navWithSheet";
 import { Button } from "./ui/button";
 
 export default function Navbar({ locale, navLinks }: NavBarProps) {
@@ -17,15 +17,14 @@ export default function Navbar({ locale, navLinks }: NavBarProps) {
 
   // start mobile first plus facile
   return (
-    <nav className="bg-background flex items-center justify-between">
+    <nav className="bg-background">
+      
       <div className="container mx-auto flex justify-between items-center">
-     
       <LogoComponent/>
-
         <ul
           className={`${
             toggle ? "flex" : " hidden"
-          }   h-auto flex-col justify-center items-center w-auto md:w-auto  md:flex md:flex-row`}
+          }   h-auto flex-col px-11 justify-center items-center w-auto md:w-auto  md:flex md:flex-row`}
         >
           {navLinks.map((link, index) => {
             return (

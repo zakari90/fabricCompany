@@ -42,9 +42,10 @@ export default function RootLayout({
 
   return (
     <html lang={locale} dir={documentDirection}>
+
       <body 
       className={cn(
-        "min-h-screen w-full font-sans antialiased",
+        "w-full font-sans antialiased",
         font )}>
         <Header locale={locale} navLinks= {navLinks}  />
           <div className='flex-grow'>{children}</div>

@@ -34,10 +34,10 @@ import Link from "next/link";
       >
         <CarouselContent>
           {products.map((product, index) => (
-            <CarouselItem key={index} className="basis-1/2 md:basis-1/3 lg:basis-1/4">  
+            <CarouselItem key={index} className="  md:basis-1/3 lg:basis-1/4">  
           <Link 
           href={`${locale}/products/${product.id}`}
-          className="group relative block overflow-hidden">
+          className=" group relative block overflow-hidden">
           <Image
           src={product.pictures[0]}
           alt={product.name}
@@ -64,8 +64,8 @@ import Link from "next/link";
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious className="absolute left-[-50px] top-1/2 -translate-y-1/2 fill-black" />
-        <CarouselNext className="absolute right-[-50px] top-1/2 -translate-y-1/2 fill-black" />
+        <CarouselPrevious className="absolute left-[-25px] top-1/2 -translate-y-1/2 fill-black" />
+        <CarouselNext className="absolute right-[-25px] top-1/2 -translate-y-1/2 fill-black" />
       </Carousel>
     </div>
 </section>
