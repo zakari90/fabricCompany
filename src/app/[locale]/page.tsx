@@ -3,6 +3,7 @@ import ContactSection from '@/components/contactSection';
 import HeroSection from '@/components/heroSection';
 import ProductsSection from '@/components/productsSection';
 import ServicesSection from '@/components/servicesSection';
+import Test from '@/components/test';
 import { Separator } from '@/components/ui/separator';
 import { useTranslations } from 'next-intl';
 
@@ -18,6 +19,7 @@ export default function Home({params} :{
 
   return (
     <>
+    <Test/>
       {/* hero */}  
       <HeroSection title={heroSection("title")} description={heroSection("description")} />
 

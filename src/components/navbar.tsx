@@ -24,7 +24,7 @@ export default function Navbar({ locale, navLinks }: NavBarProps) {
         <ul
           className={`${
             toggle ? "flex" : " hidden"
-          }   h-auto flex-col px-11 justify-center items-center w-auto md:w-auto  md:flex md:flex-row`}
+          }   h-auto flex-col justify-center items-center w-auto md:w-auto  md:flex md:flex-row`}
         >
           {navLinks.map((link, index) => {
             return (
