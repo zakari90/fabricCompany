@@ -19,7 +19,7 @@ export default function Home({params} :{
 
   return (
     <>
-    <Test/>
+    {/* <Test/> */}
       {/* hero */}  
       <HeroSection title={heroSection("title")} description={heroSection("description")} />
 

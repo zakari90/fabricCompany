@@ -17,11 +17,15 @@ export default function Navbar({ locale, navLinks }: NavBarProps) {
 
   // start mobile first plus facile
   return (
-    <nav className="bg-background">
+    <nav className="bg-background md:max-h-12">
       
-      <div className="container mx-auto flex justify-between items-center">
+      <div className="container mx-auto grid grid-cols-6 gap-4">
+      <div className="grid-cols-1 w-12">
       <LogoComponent/>
-        <ul
+
+      </div>
+      <div className="col-start-2 md:col-start-4 col-span-4">
+      <ul
           className={`${
             toggle ? "flex" : " hidden"
           }   h-auto flex-col justify-center items-center w-auto md:w-auto  md:flex md:flex-row`}
@@ -29,6 +33,7 @@ export default function Navbar({ locale, navLinks }: NavBarProps) {
           {navLinks.map((link, index) => {
             return (
                 <Button 
+                className="m-1"
                 variant="ghost"
                 key={index}
                 
@@ -46,13 +51,19 @@ export default function Navbar({ locale, navLinks }: NavBarProps) {
             );
           })}
           <LangSwitcher />
-        </ul>
+      </ul>
+      </div>
+      <div >
+      <div className="mt-3">
         <button
           className="flex justify-end md:hidden ring-1 rounded"
           onClick={showNav}
         >
           {toggle ?  <XIcon className="m-1"/> : <MenuIcon className="m-1"/>}
         </button>
+          </div>
+        </div>
+
       </div>
     </nav>
   );
