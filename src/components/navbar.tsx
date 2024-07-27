@@ -36,9 +36,7 @@ export default function Navbar({ locale, navLinks }: NavBarProps) {
                 className="m-1"
                 variant="ghost"
                 key={index}
-                
                 >
-
                 <Link
                   
                   href={`${domaine}${locale}/#${link[1]}`}
